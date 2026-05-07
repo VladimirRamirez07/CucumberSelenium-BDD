@@ -25,31 +25,27 @@ Proyecto de automatización de pruebas BDD usando **Cucumber + Selenium WebDrive
 
 ## 📁 Estructura del proyecto
 CucumberSelenium-BDD/
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── src/
-│   └── test/
-│       ├── java/
-│       │   ├── pages/
-│       │   │   ├── BasePage.java
-│       │   │   ├── LoginPage.java
-│       │   │   ├── CartPage.java
-│       │   │   └── CheckoutPage.java
-│       │   ├── steps/
-│       │   │   ├── Hooks.java
-│       │   │   ├── LoginSteps.java
-│       │   │   ├── CartSteps.java
-│       │   │   └── CheckoutSteps.java
-│       │   └── runner/
-│       │       └── TestRunner.java
-│       └── resources/
-│           └── features/
-│               ├── login.feature
-│               ├── cart.feature
-│               └── checkout.feature
-└── pom.xml
----
+```
+src/test/java/
+├── pages/
+│   ├── BasePage.java
+│   ├── LoginPage.java
+│   ├── CartPage.java
+│   └── CheckoutPage.java
+├── steps/
+│   ├── Hooks.java
+│   ├── LoginSteps.java
+│   ├── CartSteps.java
+│   └── CheckoutSteps.java
+└── runner/
+    └── TestRunner.java
+
+src/test/resources/
+└── features/
+    ├── login.feature
+    ├── cart.feature
+    └── checkout.feature
+```
 
 ## 🧪 Escenarios de prueba
 
