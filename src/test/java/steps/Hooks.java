@@ -25,7 +25,17 @@ public class Hooks {
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-popup-blocking");
 
-        // Deshabilitar el popup de "Cambia la contraseña"
+        // Modo headless para CI/CD
+        String headless = System.getProperty("headless", "false");
+        if (headless.equals("true")) {
+            options.addArguments("--headless");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--disable-gpu");
+        }
+
+        // Deshabilitar popup de contraseña
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("credentials_enable_service", false);
         prefs.put("profile.password_manager_enabled", false);
@@ -38,7 +48,8 @@ public class Hooks {
     @After
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
-            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            byte[] screenshot = ((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "screenshot");
         }
         if (driver != null) {
