@@ -1,0 +1,9 @@
+pages\BasePage.class
+steps\LoginSteps.class
+steps\CheckoutSteps.class
+pages\LoginPage.class
+pages\CartPage.class
+pages\CheckoutPage.class
+steps\Hooks.class
+steps\CartSteps.class
+runner\TestRunner.class
