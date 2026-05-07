@@ -18,26 +18,27 @@ Proyecto de automatización de pruebas BDD usando **Cucumber + Selenium WebDrive
 | Maven | 3.9.x |
 
 ## 📁 Estructura del proyecto
+text
 src/
 └── test/
-├── java/
-│   ├── pages/          # Page Object Model
-│   │   ├── BasePage.java
-│   │   ├── LoginPage.java
-│   │   ├── CartPage.java
-│   │   └── CheckoutPage.java
-│   ├── steps/          # Step Definitions
-│   │   ├── Hooks.java
-│   │   ├── LoginSteps.java
-│   │   ├── CartSteps.java
-│   │   └── CheckoutSteps.java
-│   └── runner/         # Test Runner
-│       └── TestRunner.java
-└── resources/
-└── features/       # Gherkin scenarios
-├── login.feature
-├── cart.feature
-└── checkout.feature
+    ├── java/
+    │   ├── pages/             # Page Object Model
+    │   │   ├── BasePage.java
+    │   │   ├── LoginPage.java
+    │   │   ├── CartPage.java
+    │   │   └── CheckoutPage.java
+    │   ├── steps/             # Step Definitions
+    │   │   ├── Hooks.java
+    │   │   ├── LoginSteps.java
+    │   │   ├── CartSteps.java
+    │   │   └── CheckoutSteps.java
+    │   └── runner/            # Test Runner
+    │       └── TestRunner.java
+    └── resources/
+        └── features/          # Gherkin scenarios
+            ├── login.feature
+            ├── cart.feature
+            └── checkout.feature
 ## 🧪 Escenarios de prueba
 ### Login (3 escenarios)
 - ✅ Login exitoso con credenciales válidas
